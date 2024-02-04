@@ -17,5 +17,9 @@
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
     "wrangler": "^3.26.0"
+  },
+  "dependencies": {
+    "nuxt-swiper": "^1.2.2",
+    "timers": "^0.1.1"
   }
 }
