@@ -53,7 +53,7 @@ export default {
     arr: { type: Array },
     name: {
       type: String,
-      default: "Ryan Adlard",
+      default: "Daniel Peinhopf",
     },
     menus: {
       type: [Object, Array],

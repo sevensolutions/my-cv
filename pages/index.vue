@@ -31,12 +31,18 @@
           ></a>
         </div>
 
+        <div style="margin-top: 2em; margin-bottom: -2em;">
+          <a href="/imprint">Imprint</a>
+          &nbsp;|&nbsp;
+          <a href="/privacy">Privacy</a>
+        </div>
+
         <!-- profile buttons -->
         <div class="lnks">
-          <a href="#" class="lnk">
+          <!-- <a href="#" class="lnk">
             <span class="text">Download CV</span>
             <span class="ion ion-archive"></span>
-          </a>
+          </a> -->
           <a
             href="#"
             class="lnk discover"
@@ -61,12 +67,12 @@
           <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
             <div class="text-box">
               <p>
-                I'am Daniel Peinhopf, a Software Architect and Full-Stack Developer with over 11 years of practical experience.
+                I'am Daniel Peinhopf, a Software Architect and Full-Stack Developer with over {{ experienceYears }} years of practical experience.
                 I'am working on a wide variety of projects, some small ones, but also even really big ones.
                 Currently i'am focusing on Web applications but i also have a deep knowledge on classic Windows desktop applications using client-server architectures.
               </p>
               <p>
-                C# is definitely one of my my favorite programming languages but i also code in some other languages.
+                C# is definitely one of my favorite programming languages but i also code in some other languages.
               </p>
               <p>
                 In addition to programming i really like to design and also produce electronic circuits like my own SmartHome server.
@@ -80,7 +86,7 @@
           <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
             <div class="info-list">
               <ul>
-                <li><strong>Age . . . . .</strong> 31</li>
+                <li><strong>Age . . . . .</strong> {{ age }}</li>
                 <li><strong>Nationality . . . . .</strong> Austrian</li>
                 <li><strong>Residence . . . . .</strong> Austria</li>
                 <li><strong>Freelance . . . . .</strong> Not Available</li>
@@ -222,13 +228,6 @@
                     <div class="percentage" style="width: 65%"></div>
                   </div>
                 </li>
-                
-                <li>
-                  <div class="name">Graphic Design</div>
-                  <div class="progress">
-                    <div class="percentage" style="width: 85%"></div>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
@@ -305,6 +304,12 @@
                 <li>
                   <div class="name">KiCad</div>
                 </li>
+                <li>
+                  <div class="name">Buildroot</div>
+                </li>
+                <li>
+                  <div class="name">Linux Kernel Driver Development</div>
+                </li>
               </ul>
             </div>
           </div>
@@ -379,12 +384,25 @@ import WorkIsotope from "../src/components/WorkIsotope.vue";
 import Header from "../src/layout/Header.vue";
 import Layout from "../src/layout/Layout.vue";
 import { navFunction } from "../src/navFunction";
+
+function getAge(dateNumber) {
+  var today = new Date();
+  var date = new Date(dateNumber);
+  var age = today.getFullYear() - date.getFullYear();
+  var m = today.getMonth() - date.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < date.getDate()))
+    age--;
+  return age;
+}
+
 export default {
   name: `index-new`,
 
   data() {
     return {
       navFunction,
+      age: getAge(710632800000),
+      experienceYears: getAge(1341093600000),
       skills: [
         { name: "BORA", value: 100 },
         { name: ".NET", value: 99 },

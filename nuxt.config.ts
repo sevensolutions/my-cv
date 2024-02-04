@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: ["nuxt-swiper"],
+  nitro: {
+    preset: 'cloudflare-pages'
+  },
 
   app: {
     head: {
