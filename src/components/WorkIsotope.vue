@@ -21,8 +21,11 @@
         <label><input type="radio" name="fl_radio" value="electronics" />Electronics</label>
       </div>
       <div class="f_btn">
-        <label><input type="radio" name="fl_radio" value="other" />Other</label>
+        <label><input type="radio" name="fl_radio" value="openSource" />OpenSource</label>
       </div>
+      <!-- <div class="f_btn">
+        <label><input type="radio" name="fl_radio" value="other" />Other</label>
+      </div> -->
     </div>
 
     <!-- content -->
@@ -114,7 +117,7 @@
       </div>
 
       <!-- work item design -->
-      <div class="col col-d-6 col-t-6 col-m-12 grid-item other border-line-h">
+      <div class="col col-d-6 col-t-6 col-m-12 grid-item openSource border-line-h">
         <div class="box-item">
           <div class="image">
             <a href="#popup-3" class="has-popup-media">
@@ -126,7 +129,7 @@
           </div>
           <div class="desc">
             <a href="#popup-3" class="name has-popup-media">Nomad IIS Task Driver</a>
-            <div class="category">Other</div>
+            <div class="category">OpenSource</div>
           </div>
           <div id="popup-3" class="popup-box mfp-fade mfp-hide">
             <div class="content">
@@ -136,7 +139,7 @@
               <div class="desc">
                 <div class="post-box">
                   <h1>Nomad IIS Task Driver</h1>
-                  <div class="blog-detail">Other</div>
+                  <div class="blog-detail">OpenSource</div>
                   <div class="blog-content">
                     <p>
                       <i>Nomad IIS</i> is a task driver for HashiCorp Nomad to run web-applications in IIS on Windows machines. Unlike most other Nomad task drivers, this one is written in the C# language using ASP.NET 8. It uses the Microsoft.Web.Administration-API to communicate with IIS. Feel free to use it as-is or as a reference implementation for your own C#-based Nomad-plugins.
@@ -240,7 +243,7 @@
       </div>
 
       <!-- work item design -->
-      <div class="col col-d-6 col-t-6 col-m-12 grid-item other border-line-h">
+      <div class="col col-d-6 col-t-6 col-m-12 grid-item openSource border-line-h">
         <div class="box-item">
           <div class="image">
             <a href="#popup-6" class="has-popup-media">
@@ -252,7 +255,7 @@
           </div>
           <div class="desc">
             <a href="#popup-6" class="name has-popup-media">Contributions to Apache APISIX</a>
-            <div class="category">Other</div>
+            <div class="category">OpenSource</div>
           </div>
           <div id="popup-6" class="popup-box mfp-fade mfp-hide">
             <div class="content">
@@ -262,7 +265,7 @@
               <div class="desc">
                 <div class="post-box">
                   <h1>Contributions to Apache APISIX</h1>
-                  <div class="blog-detail">Other</div>
+                  <div class="blog-detail">OpenSource</div>
                   <div class="blog-content">
                     <p>
                       I really like Apache APISIX, a great API gateway. In 2023 i made my first contribution to this Open Source project.
@@ -302,6 +305,90 @@
                   <div class="blog-content">
                     <p>
                       One of my newer projects is a self-made Pick and Place Machine for mass-assembly of Electronic Products.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- work item design -->
+      <div class="col col-d-6 col-t-6 col-m-12 grid-item openSource border-line-h">
+        <div class="box-item">
+          <div class="image">
+            <a href="#popup-3" class="has-popup-media">
+              <img src="https://raw.githubusercontent.com/sevensolutions/traefik-oidc-auth/refs/heads/main/.assets/icon.png" alt="" />
+              <span class="info">
+                <span class="ion ion-images"></span>
+              </span>
+            </a>
+          </div>
+          <div class="desc">
+            <a href="#popup-3" class="name has-popup-media">Traefik OIDC Authentication Plugin</a>
+            <div class="category">OpenSource</div>
+          </div>
+          <div id="popup-3" class="popup-box mfp-fade mfp-hide">
+            <div class="content">
+              <div class="image">
+                <img src="https://raw.githubusercontent.com/sevensolutions/traefik-oidc-auth/refs/heads/main/.assets/icon.png" alt="" />
+              </div>
+              <div class="desc">
+                <div class="post-box">
+                  <h1>Traefik OIDC Authentication Plugin</h1>
+                  <div class="blog-detail">OpenSource</div>
+                  <div class="blog-content">
+                    <p>
+                      A <a href="https://traefik.io/traefik/" target="_blank">traefik</a> Plugin for securing the upstream service with OpenID Connect acting as a relying party.
+                    </p>
+                    <p>
+                      My second real Open Source Project which is used by the traefik community quite a lot.
+                    </p>
+                  </div>
+                  <a href="https://github.com/sevensolutions/traefik-oidc-auth" target="_blank" class="button">
+                    <span class="text">GitHub Repository</span>
+                    <span class="arrow"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- work item design -->
+      <div class="col col-d-6 col-t-6 col-m-12 grid-item electronics border-line-h">
+        <div class="box-item">
+          <div class="image">
+            <a href="#popup-1" class="has-popup-media">
+              <img src="/images/works/SoundcraftMixer.jpg" alt="" />
+              <span class="info">
+                <span class="ion ion-images"></span>
+              </span>
+            </a>
+          </div>
+          <div class="desc">
+            <a href="#popup-1" class="name has-popup-media">Digital Audio Mixing Console</a>
+            <div class="category">Electronics</div>
+          </div>
+          <div id="popup-1" class="popup-box mfp-fade mfp-hide">
+            <div class="content">
+              <div class="image">
+                <img src="/images/works/SoundcraftMixer.jpg" alt="" />
+              </div>
+              <div class="desc">
+                <div class="post-box">
+                  <h1>Digital Audio Mixing Console</h1>
+                  <div class="blog-detail">Electronics</div>
+                  <div class="blog-content">
+                    <p>
+                      In our parish I often help with my audio equipment at various events, such as weddings.
+                    </p>
+                    <p>
+                      Since setting up all the equipment always takes a relatively long time, I built this audio mixing console.<br />
+                      It includes a Soundcraft UI24R digital mixer, as well as a super bright industrial touchscreen monitor to operate the mixer.
+                      In addition, a wireless microphone receiver and power distribution are integrated.
                     </p>
                   </div>
                 </div>
