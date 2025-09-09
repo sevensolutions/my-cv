@@ -192,10 +192,10 @@
                       - eingefädelt - Zusammenleben in Vielfalt
                     </blockquote>
                   </div>
-                  <a href="https://eingefaedelt.com" target="_blank" class="button">
+                  <!-- <a href="https://eingefaedelt.com" target="_blank" class="button">
                     <span class="text">View Website</span>
                     <span class="arrow"></span>
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>

@@ -18,18 +18,16 @@
         <div class="text">
           Thanks to Daniel Peinhopf, our non-profit organization "eingefädelt" has a very attractive and professional website. We are often asked about this.
         </div>
-        <a href="https://eingefaedelt.com" target="_blank">
-          <div class="user">
-            <div class="img">
-              <img src="https://eingefaedelt.com/media/vzqmbksc/logo-default.png" alt="" />
-            </div>
-            <div class="info">
-              <div class="name">eingefädelt</div>
-              <div class="company">Zusammenleben in Vielfalt</div>
-            </div>
-            <div class="clear"></div>
+        <div class="user">
+          <div class="img">
+            <!-- <img src="https://eingefaedelt.com/media/vzqmbksc/logo-default.png" alt="" /> -->
           </div>
-        </a>
+          <div class="info">
+            <div class="name">eingefädelt</div>
+            <div class="company">Zusammenleben in Vielfalt</div>
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
     </SwiperSlide>
     <div class="owl-dots"></div>
