@@ -294,6 +294,9 @@
                   <div class="name">DevOps</div>
                 </li>
                 <li>
+                  <div class="name">HashiCorp Nomad, Consul, Terraform</div>
+                </li>
+                <li>
                   <div class="name">Azure Cloud</div>
                 </li>
                 <li>
@@ -319,6 +322,9 @@
                 </li>
                 <li>
                   <div class="name">Linux Kernel Driver Development</div>
+                </li>
+                <li>
+                  <div class="name">GIT and TFVC Version Control</div>
                 </li>
               </ul>
             </div>
