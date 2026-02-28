@@ -67,12 +67,13 @@
           <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
             <div class="text-box">
               <p>
-                I'am Daniel Peinhopf, a Software Architect and Full-Stack Developer with over {{ experienceYears }} years of practical experience.
+                I'am Daniel Peinhopf, a Software Architect, Full-Stack Developer and tech-allrounder with over {{ experienceYears }} years of practical experience.
                 I'am working on a wide variety of projects, some small ones, but also even really big ones.
                 Currently i'am focusing on Web applications but i also have a deep knowledge on classic Windows desktop applications using client-server architectures.
               </p>
               <p>
                 C# is definitely one of my favorite programming languages but i also code in some other languages.
+                I'am contributing to multiple open source projects and also have some of my own open source projects on GitHub.
               </p>
               <p>
                 In addition to programming i really like to design and also produce electronic circuits like my own SmartHome server.
@@ -213,13 +214,19 @@
                 <li class="border-line-h">
                   <div class="name">C# (.NET)</div>
                   <div class="progress">
-                    <div class="percentage" style="width: 99%"></div>
+                    <div class="percentage" style="width: 100%"></div>
                   </div>
                 </li>
                 <li class="border-line-h">
                   <div class="name">HTML/CSS/JavaScript/TypeScript</div>
                   <div class="progress">
-                    <div class="percentage" style="width: 85%"></div>
+                    <div class="percentage" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="border-line-h">
+                  <div class="name">Go</div>
+                  <div class="progress">
+                    <div class="percentage" style="width: 75%"></div>
                   </div>
                 </li>
                 <li class="border-line-h">
@@ -282,6 +289,9 @@
                 </li>
                 <li>
                   <div class="name">Web Design</div>
+                </li>
+                <li>
+                  <div class="name">DevOps</div>
                 </li>
                 <li>
                   <div class="name">Azure Cloud</div>
@@ -405,7 +415,7 @@ export default {
       experienceYears: getAge(1341093600000),
       skills: [
         { name: "BORA", value: 100 },
-        { name: ".NET", value: 99 },
+        { name: ".NET", value: 100 },
         { name: "EntityFramework", value: 75 },
         { name: "Vue / Nuxt", value: 85 },
         { name: "React", value: 60 },

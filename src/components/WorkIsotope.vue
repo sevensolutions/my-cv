@@ -191,6 +191,10 @@
                       Thanks to Daniel Peinhopf, our non-profit organization "eingefädelt" has a very attractive and professional website. We are often asked about this.
                       - eingefädelt - Zusammenleben in Vielfalt
                     </blockquote>
+                    <p>
+                      <b>Update:</b>
+                      The organization was unfortunately dissolved in 2024. Therefore, the website is now offline.
+                    </p>
                   </div>
                   <!-- <a href="https://eingefaedelt.com" target="_blank" class="button">
                     <span class="text">View Website</span>
