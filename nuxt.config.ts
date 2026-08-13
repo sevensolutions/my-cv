@@ -5,9 +5,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxt/icon'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode'],
 
   css: ['~/assets/css/main.css'],
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
+    classSuffix: '',
+  },
 
   vite: {
     plugins: [tailwindcss()],
@@ -32,11 +38,6 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: 'description', content: 'Daniel Peinhopf — Software Architect, Full-Stack Developer and tech-allrounder from Austria. Building web apps, DevOps tooling and open source software.' },
         { name: "format-detection", content: "telephone=no" },
-      ],
-      script: [
-        {
-          innerHTML: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})()`,
-        },
       ],
     },
   },

@@ -81,7 +81,11 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ]
 
-const { isDark, toggle } = useDarkMode()
+const colorMode = useColorMode()
+const isDark = computed(() => colorMode.value === 'dark')
+const toggle = () => {
+  colorMode.preference = isDark.value ? 'light' : 'dark'
+}
 const mobileOpen = ref(false)
 const scrolled = ref(false)
 
