@@ -29,32 +29,32 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    date: '2023 — Present',
+    date: '2023 - Present',
     title: 'Product Owner — BORA',
     place: 'Boom Software AG',
     description: 'Responsible for the architecture and design of the BORA framework, and advising projects on architectural decisions.',
   },
   {
-    date: '2020 — 2021',
+    date: '2020 - 2021',
     title: 'Technical Lead — Boom Rail Solutions',
     place: 'Boom Software AG',
     description: 'Responsible for the technical implementation of the Rail Solutions product line.',
     link: { href: 'https://rail.boomsoftware.com/', label: 'rail.boomsoftware.com' },
   },
   {
-    date: '2015 — 2021',
+    date: '2015 - 2021',
     title: 'Software Developer (R&D)',
     place: 'Boom Software AG',
     description: 'Product development of the Boom Maintenance Manager — a highly configurable maintenance & repair application.',
   },
   {
-    date: '2012 — 2015',
+    date: '2012 - 2015',
     title: 'Software Developer (Total Customizing)',
     place: 'Boom Software AG',
     description: 'Customizing the Boom Maintenance Manager to meet specific customer requirements.',
   },
   {
-    date: '2011 — 2012',
+    date: '2011 - 2012',
     title: 'Community Service',
     place: 'Benedictine monastery of St. Lambrecht',
   },
@@ -68,18 +68,18 @@ export const experience: ExperienceItem[] = [
 
 export const education: ExperienceItem[] = [
   {
-    date: '2006 — 2011',
+    date: '2006 - 2011',
     title: 'HTBLA Kapfenberg',
     place: 'Regelungstechnik',
     description: 'Successful completion of the Matura after 5 years.',
   },
   {
-    date: '2002 — 2006',
+    date: '2002 - 2006',
     title: 'Technische Hauptschule Pöls',
     place: 'Secondary school, technical focus',
   },
   {
-    date: '1998 — 2002',
+    date: '1998 - 2002',
     title: 'Volksschule Pöls',
     place: 'Elementary school',
   },

@@ -51,12 +51,32 @@
 
       <div class="relative mx-auto w-full max-w-sm">
         <div class="absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-br from-accent-300 to-warm-300 opacity-60 blur-2xl dark:from-accent-700 dark:to-warm-600 dark:opacity-30" />
-        <div class="overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/40 p-3 shadow-2xl shadow-ink-900/10 backdrop-blur dark:border-white/10 dark:bg-white/5">
-          <img
-            src="/images/ProfilePicture.jpg"
-            alt="Portrait of Daniel Peinhopf"
-            class="aspect-[4/5] w-full rounded-[2rem] object-cover"
-          />
+        <div
+          class="group relative cursor-pointer overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/40 p-3 shadow-2xl shadow-ink-900/10 backdrop-blur dark:border-white/10 dark:bg-white/5"
+          @mouseenter="swapTo(1)"
+          @mouseleave="swapTo(0)"
+          @click="swapTo(active === 0 ? 1 : 0)"
+        >
+          <div class="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
+            <img
+              :src="images[0]"
+              alt="Portrait of Daniel Peinhopf"
+              class="absolute inset-0 size-full object-cover transition-opacity duration-150"
+              :class="active === 0 ? 'opacity-100' : 'opacity-0'"
+            />
+            <img
+              :src="images[1]"
+              alt="Portrait of Daniel Peinhopf, alternate photo"
+              class="absolute inset-0 size-full object-cover transition-opacity duration-150"
+              :class="active === 1 ? 'opacity-100' : 'opacity-0'"
+            />
+
+            <div v-if="glitching" class="pointer-events-none absolute inset-0" aria-hidden="true">
+              <span class="glitch-slice glitch-slice--r" :style="{ backgroundImage: `url(${glitchImage})` }" />
+              <span class="glitch-slice glitch-slice--g" :style="{ backgroundImage: `url(${glitchImage})` }" />
+              <span class="glitch-slice glitch-slice--b" :style="{ backgroundImage: `url(${glitchImage})` }" />
+            </div>
+          </div>
         </div>
         <div class="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-4 py-3 shadow-xl dark:border-white/10 dark:bg-ink-900">
           <span class="grid size-9 place-items-center rounded-full bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
@@ -76,4 +96,102 @@
 import { roles } from '~/data/portfolio'
 
 const { text } = useTypewriter(roles)
+
+const images = ['/images/ProfilePicture2.jpg', '/images/ProfilePicture.jpg']
+
+const active = ref(0)
+const glitching = ref(false)
+const glitchImage = ref(images[1])
+
+let glitchOffTimer: ReturnType<typeof setTimeout> | undefined
+let swapTimer: ReturnType<typeof setTimeout> | undefined
+
+function swapTo(target: number) {
+  if (target === active.value)
+    return
+
+  clearTimeout(glitchOffTimer)
+  clearTimeout(swapTimer)
+
+  const reduceMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (reduceMotion) {
+    active.value = target
+    return
+  }
+
+  glitchImage.value = images[target]
+  // Force the CSS animation to restart even if triggered again mid-flight.
+  glitching.value = false
+  requestAnimationFrame(() => {
+    glitching.value = true
+  })
+
+  // Swap the underlying image partway through the glitch, so the noise masks the cut.
+  swapTimer = setTimeout(() => {
+    active.value = target
+  }, 110)
+
+  glitchOffTimer = setTimeout(() => {
+    glitching.value = false
+  }, 380)
+}
+
+onUnmounted(() => {
+  clearTimeout(glitchOffTimer)
+  clearTimeout(swapTimer)
+})
 </script>
+
+<style scoped>
+.glitch-slice {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+
+.glitch-slice--r {
+  filter: sepia(1) saturate(8) hue-rotate(-55deg) brightness(1.1);
+  animation: glitch-shift-r 0.38s steps(2, end);
+}
+
+.glitch-slice--g {
+  filter: sepia(1) saturate(8) hue-rotate(70deg) brightness(1.1);
+  animation: glitch-shift-g 0.38s steps(2, end);
+}
+
+.glitch-slice--b {
+  filter: sepia(1) saturate(8) hue-rotate(185deg) brightness(1.1);
+  animation: glitch-shift-b 0.38s steps(2, end);
+}
+
+@keyframes glitch-shift-r {
+  0% { opacity: 0; clip-path: inset(12% 0 58% 0); transform: translate3d(0, 0, 0); }
+  15% { opacity: 0.9; clip-path: inset(12% 0 58% 0); transform: translate3d(-6px, -2px, 0); }
+  35% { opacity: 0.75; clip-path: inset(45% 0 20% 0); transform: translate3d(5px, 1px, 0); }
+  55% { opacity: 0.65; clip-path: inset(0 0 75% 0); transform: translate3d(-4px, 2px, 0); }
+  75% { opacity: 0.35; clip-path: inset(70% 0 5% 0); transform: translate3d(3px, -1px, 0); }
+  100% { opacity: 0; clip-path: inset(0 0 0 0); transform: translate3d(0, 0, 0); }
+}
+
+@keyframes glitch-shift-g {
+  0% { opacity: 0; clip-path: inset(30% 0 40% 0); transform: translate3d(0, 0, 0); }
+  20% { opacity: 0.85; clip-path: inset(5% 0 80% 0); transform: translate3d(6px, 1px, 0); }
+  40% { opacity: 0.7; clip-path: inset(60% 0 10% 0); transform: translate3d(-5px, -2px, 0); }
+  60% { opacity: 0.55; clip-path: inset(20% 0 55% 0); transform: translate3d(4px, 2px, 0); }
+  80% { opacity: 0.3; clip-path: inset(0 0 85% 0); transform: translate3d(-3px, 1px, 0); }
+  100% { opacity: 0; clip-path: inset(0 0 0 0); transform: translate3d(0, 0, 0); }
+}
+
+@keyframes glitch-shift-b {
+  0% { opacity: 0; clip-path: inset(50% 0 10% 0); transform: translate3d(0, 0, 0); }
+  18% { opacity: 0.8; clip-path: inset(0 0 65% 0); transform: translate3d(-7px, 2px, 0); }
+  38% { opacity: 0.9; clip-path: inset(35% 0 30% 0); transform: translate3d(6px, -1px, 0); }
+  58% { opacity: 0.5; clip-path: inset(15% 0 60% 0); transform: translate3d(-4px, 1px, 0); }
+  78% { opacity: 0.25; clip-path: inset(65% 0 0 0); transform: translate3d(3px, -2px, 0); }
+  100% { opacity: 0; clip-path: inset(0 0 0 0); transform: translate3d(0, 0, 0); }
+}
+</style>

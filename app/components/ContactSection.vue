@@ -14,7 +14,7 @@
           Let's build something great together
         </h2>
         <p class="mx-auto mt-4 max-w-md text-base text-ink-300">
-          Feel free to reach out for collaborations, questions, or just to say hi.
+          Feel free to reach out for questions or interesting collaborations.
         </p>
 
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
