@@ -38,13 +38,13 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     date: '2023 - Present',
-    title: 'Product Owner — BORA',
+    title: 'Product Owner - BORA',
     place: 'Boom Software AG',
     description: 'Responsible for the architecture and design of the BORA framework, and advising projects on architectural decisions.',
   },
   {
     date: '2020 - 2021',
-    title: 'Technical Lead — Boom Rail Solutions',
+    title: 'Technical Lead - Boom Rail Solutions',
     place: 'Boom Software AG',
     description: 'Responsible for the technical implementation of the Rail Solutions product line.',
     link: { href: 'https://rail.boomsoftware.com/', label: 'rail.boomsoftware.com' },
@@ -53,7 +53,7 @@ export const experience: ExperienceItem[] = [
     date: '2015 - 2021',
     title: 'Software Developer (R&D)',
     place: 'Boom Software AG',
-    description: 'Product development of the Boom Maintenance Manager — a highly configurable maintenance & repair application.',
+    description: 'Product development of the Boom Maintenance Manager. A highly customizable maintenance management application.',
   },
   {
     date: '2012 - 2015',
@@ -149,7 +149,7 @@ export const categoryIcons: Record<ProjectCategory, string> = {
   openSource: 'lucide:github',
 }
 
-/** How an image should fill its frame — 'cover' crops to fill (the default), 'contain' letterboxes to show the whole image uncropped (best for logos/screenshots). */
+/** How an image should fill its frame - 'cover' crops to fill (the default), 'contain' letterboxes to show the whole image uncropped (best for logos/screenshots). */
 export type ImageFit = 'cover' | 'contain'
 
 export interface GalleryImage {

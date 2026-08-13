@@ -24,8 +24,8 @@
 
         <p class="mt-6 max-w-xl text-base leading-relaxed text-ink-500 dark:text-ink-400">
           A software architect, full-stack developer and tech-allrounder from Austria with over
-          {{ yearsOfExperience }} years of practical experience — from web applications
-          and cloud infrastructure to classic Windows desktop software and electronics.
+          {{ yearsOfExperience }} years of practical experience. From web applications
+          and cloud infrastructure to classic Windows desktop software and even electronics.
         </p>
 
         <div class="mt-8 flex flex-wrap items-center gap-4">

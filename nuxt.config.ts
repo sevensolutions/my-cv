@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Daniel Peinhopf — Software Architect & Full-Stack Developer',
+      title: 'Daniel Peinhopf - Software Architect & Full-Stack Developer',
       htmlAttrs: { lang: 'en' },
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: 'description', content: 'Daniel Peinhopf — Software Architect, Full-Stack Developer and tech-allrounder from Austria. Building web apps, DevOps tooling and open source software.' },
+        { name: 'description', content: 'Daniel Peinhopf - Software Architect, Full-Stack Developer and tech-allrounder from Austria. Building web apps, DevOps tooling and open source software.' },
         { name: "format-detection", content: "telephone=no" },
       ],
     },

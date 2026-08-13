@@ -129,5 +129,5 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Privacy — Daniel Peinhopf' })
+useHead({ title: 'Privacy - Daniel Peinhopf' })
 </script>

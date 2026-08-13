@@ -7,7 +7,7 @@
         <p>
           I'm Daniel Peinhopf, a software architect, full-stack developer and tech-allrounder with over
           {{ yearsOfExperience }} years of practical experience. I work on a wide variety
-          of projects — some small, some really big — and I'm currently focused on web applications,
+          of projects. Some small but also some really big ones. I'm currently focused on web applications,
           though I also have deep knowledge of classic Windows desktop applications built on
           client-server architectures.
         </p>
@@ -17,8 +17,8 @@
           open source projects and maintain a few of my own on GitHub.
         </p>
         <p>
-          Beyond programming, I really enjoy designing and producing electronic circuits — like my own
-          SmartHome server, AutomationS.
+          Beyond programming, I really enjoy designing and producing electronic circuits, like my own
+          SmartHome server called <i>AutomationS</i>.
         </p>
       </div>
 

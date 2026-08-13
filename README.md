@@ -6,7 +6,7 @@ Source code for [Daniel Peinhopf's](https://github.com/sevensolutions) personal 
 
 - [Bun](https://bun.sh)
 
-This project uses Bun exclusively — there are no `npm`/`yarn`/`pnpm` lockfiles, so please stick to `bun` for all commands below.
+This project uses Bun exclusively. There are no `npm`/`yarn`/`pnpm` lockfiles, so please stick to `bun` for all commands below.
 
 ## Setup
 

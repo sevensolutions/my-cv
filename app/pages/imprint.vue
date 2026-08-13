@@ -55,5 +55,5 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Imprint — Daniel Peinhopf' })
+useHead({ title: 'Imprint - Daniel Peinhopf' })
 </script>
