@@ -133,6 +133,14 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   openSource: 'Open Source',
 }
 
+export const categoryIcons: Record<ProjectCategory, string> = {
+  webApp: 'lucide:app-window',
+  mobileApp: 'lucide:smartphone',
+  website: 'lucide:globe',
+  electronics: 'lucide:cpu',
+  openSource: 'lucide:github',
+}
+
 /** How an image should fill its frame — 'cover' crops to fill (the default), 'contain' letterboxes to show the whole image uncropped (best for logos/screenshots). */
 export type ImageFit = 'cover' | 'contain'
 

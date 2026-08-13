@@ -23,7 +23,7 @@
             <button
               type="button"
               aria-label="Close"
-              class="absolute top-4 right-4 z-20 grid size-9 place-items-center rounded-full bg-white/90 text-ink-600 shadow-md transition-colors hover:bg-white hover:text-ink-900 dark:bg-ink-950/80 dark:text-ink-300 dark:hover:text-white"
+              class="absolute top-4 right-4 z-20 grid size-9 place-items-center rounded-full bg-white/90 text-ink-600 shadow-md transition-colors hover:bg-white hover:text-ink-900 dark:bg-ink-950/80 dark:text-ink-300 dark:hover:bg-ink-900 dark:hover:text-white"
               @click="$emit('close')"
             >
               <Icon name="lucide:x" class="size-4" />
@@ -49,7 +49,7 @@
                 <button
                   type="button"
                   aria-label="Previous image"
-                  class="absolute top-1/2 left-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200"
+                  class="absolute top-1/2 left-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200 dark:hover:bg-ink-900 dark:hover:text-white"
                   @click="prev"
                 >
                   <Icon name="lucide:chevron-left" class="size-5" />
@@ -57,7 +57,7 @@
                 <button
                   type="button"
                   aria-label="Next image"
-                  class="absolute top-1/2 right-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200"
+                  class="absolute top-1/2 right-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200 dark:hover:bg-ink-900 dark:hover:text-white"
                   @click="next"
                 >
                   <Icon name="lucide:chevron-right" class="size-5" />
@@ -88,9 +88,7 @@
             </div>
 
             <div class="p-6 sm:p-8">
-              <span class="inline-flex items-center rounded-full bg-accent-100 px-3 py-1 text-xs font-semibold text-accent-700 dark:bg-accent-500/10 dark:text-accent-300">
-                {{ categoryLabels[project.category] }}
-              </span>
+              <Badge :icon="categoryIcons[project.category]">{{ categoryLabels[project.category] }}</Badge>
               <h3 class="mt-4 text-2xl font-bold text-ink-900 dark:text-white">{{ project.title }}</h3>
 
               <div class="mt-4 space-y-3 text-sm leading-relaxed text-ink-500 dark:text-ink-400">
@@ -116,7 +114,7 @@
 </template>
 
 <script setup lang="ts">
-import { categoryLabels, type GalleryImage, type Project } from '~/data/portfolio'
+import { categoryIcons, categoryLabels, type GalleryImage, type Project } from '~/data/portfolio'
 
 const props = defineProps<{ project: Project | null }>()
 const emit = defineEmits<{ close: [] }>()

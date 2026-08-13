@@ -3,13 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "pages:dev": "wrangler pages dev --compatibility-date=2024-01-29 --proxy 3000 -- bun run dev",
-    "pages:deploy": "npm run build && wrangler pages deploy ./dist"
+    "pages:deploy": "bun run build && wrangler pages deploy ./dist"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.123",
