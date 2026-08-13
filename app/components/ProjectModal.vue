@@ -52,7 +52,7 @@
                   class="absolute top-1/2 left-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200 dark:hover:bg-ink-900 dark:hover:text-white"
                   @click="prev"
                 >
-                  <Icon name="lucide:chevron-left" class="size-5" />
+                  <Icon name="lucide:chevron-left" size="1.2em" />
                 </button>
                 <button
                   type="button"
@@ -60,7 +60,7 @@
                   class="absolute top-1/2 right-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200 dark:hover:bg-ink-900 dark:hover:text-white"
                   @click="next"
                 >
-                  <Icon name="lucide:chevron-right" class="size-5" />
+                  <Icon name="lucide:chevron-right" size="1.2em" />
                 </button>
 
                 <span class="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-ink-950/60 px-2.5 py-1 text-xs font-medium text-white">

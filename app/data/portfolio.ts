@@ -12,10 +12,18 @@ export const socials = [
   { name: 'Xing', href: 'https://www.xing.com/profile/Daniel_Peinhopf', icon: 'xing' },
 ]
 
+// The year I'am started working professionally. Used to derive "years of
+// experience" on the client so this never goes stale between deploys.
+export const careerStartYear = 2012
+
+export function getYearsOfExperience(): number {
+  return new Date().getFullYear() - careerStartYear
+}
+
 export const facts = [
   { label: 'Based in', value: 'Austria', icon: 'map-pin' },
   { label: 'Nationality', value: 'Austrian', icon: 'flag' },
-  { label: 'Experience', value: '13+ years', icon: 'briefcase' },
+  { label: 'Experience', value: `${getYearsOfExperience()}+ years`, icon: 'briefcase' },
   { label: 'Freelance', value: 'Not available', icon: 'circle-off' },
 ]
 

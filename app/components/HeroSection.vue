@@ -24,7 +24,7 @@
 
         <p class="mt-6 max-w-xl text-base leading-relaxed text-ink-500 dark:text-ink-400">
           A software architect, full-stack developer and tech-allrounder from Austria with over
-          {{ new Date().getFullYear() - 2012 }} years of practical experience — from web applications
+          {{ yearsOfExperience }} years of practical experience — from web applications
           and cloud infrastructure to classic Windows desktop software and electronics.
         </p>
 
@@ -93,9 +93,11 @@
 </template>
 
 <script setup lang="ts">
-import { roles } from '~/data/portfolio'
+import { getYearsOfExperience, roles } from '~/data/portfolio'
 
 const { text } = useTypewriter(roles)
+
+const yearsOfExperience = getYearsOfExperience()
 
 const images = ['/images/ProfilePicture2.jpg', '/images/ProfilePicture.jpg']
 

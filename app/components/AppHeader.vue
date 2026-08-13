@@ -23,8 +23,8 @@
           class="grid size-10 place-items-center rounded-full text-ink-500 transition-colors hover:bg-ink-100 hover:text-ink-800 dark:text-ink-300 dark:hover:bg-white/10 dark:hover:text-white"
           @click="toggle"
         >
-          <Icon v-if="isDark" name="lucide:sun" class="size-5" />
-          <Icon v-else name="lucide:moon" class="size-5" />
+          <Icon v-if="isDark" name="lucide:sun" size="1.2em" />
+          <Icon v-else name="lucide:moon" size="1.2em" />
         </button>
 
         <a
@@ -40,8 +40,8 @@
           class="grid size-10 place-items-center rounded-full text-ink-500 transition-colors hover:bg-ink-100 hover:text-ink-800 md:hidden dark:text-ink-300 dark:hover:bg-white/10 dark:hover:text-white"
           @click="mobileOpen = !mobileOpen"
         >
-          <Icon v-if="mobileOpen" name="lucide:x" class="size-5" />
-          <Icon v-else name="lucide:menu" class="size-5" />
+          <Icon v-if="mobileOpen" name="lucide:x" size="1.2em" />
+          <Icon v-else name="lucide:menu" size="1.2em" />
         </button>
       </div>
     </nav>

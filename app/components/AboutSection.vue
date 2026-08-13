@@ -6,7 +6,7 @@
       <div class="space-y-5 text-base leading-relaxed text-ink-600 dark:text-ink-300">
         <p>
           I'm Daniel Peinhopf, a software architect, full-stack developer and tech-allrounder with over
-          {{ new Date().getFullYear() - 2012 }} years of practical experience. I work on a wide variety
+          {{ yearsOfExperience }} years of practical experience. I work on a wide variety
           of projects — some small, some really big — and I'm currently focused on web applications,
           though I also have deep knowledge of classic Windows desktop applications built on
           client-server architectures.
@@ -29,7 +29,7 @@
           class="rounded-2xl border border-ink-100 bg-white p-5 shadow-sm transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-ink-900"
         >
           <span class="grid size-10 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-            <Icon :name="`lucide:${fact.icon}`" class="size-5" />
+            <Icon :name="`lucide:${fact.icon}`" size="1.2em" />
           </span>
           <p class="mt-3 text-sm text-ink-400">{{ fact.label }}</p>
           <p class="text-base font-semibold text-ink-900 dark:text-white">{{ fact.value }}</p>
@@ -40,5 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { facts } from '~/data/portfolio'
+import { facts, getYearsOfExperience } from '~/data/portfolio'
+
+const yearsOfExperience = getYearsOfExperience()
 </script>

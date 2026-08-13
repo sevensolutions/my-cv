@@ -2,8 +2,8 @@
   <div class="rounded-3xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8 dark:border-white/10 dark:bg-ink-900">
     <div class="mb-8 flex items-center gap-3">
       <span class="grid size-11 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-        <Icon v-if="icon === 'briefcase'" name="lucide:briefcase" class="size-5" />
-        <Icon v-else name="lucide:graduation-cap" class="size-5" />
+        <Icon v-if="icon === 'briefcase'" name="lucide:briefcase" size="1.2em" />
+        <Icon v-else name="lucide:graduation-cap" size="1.2em" />
       </span>
       <h3 class="text-xl font-bold text-ink-900 dark:text-white">{{ title }}</h3>
     </div>
