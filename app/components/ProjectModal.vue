@@ -26,7 +26,7 @@
               class="absolute top-4 right-4 z-20 grid size-9 place-items-center rounded-full bg-white/90 text-ink-600 shadow-md transition-colors hover:bg-white hover:text-ink-900 dark:bg-ink-950/80 dark:text-ink-300 dark:hover:text-white"
               @click="$emit('close')"
             >
-              <X class="size-4" />
+              <Icon name="lucide:x" class="size-4" />
             </button>
 
             <div class="group relative aspect-video w-full overflow-hidden bg-ink-100 dark:bg-white/5">
@@ -52,7 +52,7 @@
                   class="absolute top-1/2 left-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200"
                   @click="prev"
                 >
-                  <ChevronLeft class="size-5" />
+                  <Icon name="lucide:chevron-left" class="size-5" />
                 </button>
                 <button
                   type="button"
@@ -60,7 +60,7 @@
                   class="absolute top-1/2 right-3 grid size-9 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink-700 opacity-0 shadow-md transition-opacity group-hover:opacity-100 hover:bg-white focus-visible:opacity-100 dark:bg-ink-950/80 dark:text-ink-200"
                   @click="next"
                 >
-                  <ChevronRight class="size-5" />
+                  <Icon name="lucide:chevron-right" class="size-5" />
                 </button>
 
                 <span class="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-ink-950/60 px-2.5 py-1 text-xs font-medium text-white">
@@ -105,7 +105,7 @@
                 class="mt-6 inline-flex items-center gap-2 rounded-full bg-ink-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-600 dark:bg-white dark:text-ink-900 dark:hover:bg-accent-400"
               >
                 {{ project.link.label }}
-                <ExternalLink class="size-4" />
+                <Icon name="lucide:external-link" class="size-4" />
               </a>
             </div>
           </div>
@@ -116,7 +116,6 @@
 </template>
 
 <script setup lang="ts">
-import { ChevronLeft, ChevronRight, ExternalLink, X } from 'lucide-vue-next'
 import { categoryLabels, type GalleryImage, type Project } from '~/data/portfolio'
 
 const props = defineProps<{ project: Project | null }>()

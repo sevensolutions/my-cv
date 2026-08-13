@@ -7,7 +7,7 @@
       :key="testimonial.name"
       class="relative rounded-3xl border border-ink-100 bg-white p-8 text-center shadow-sm sm:p-12 dark:border-white/10 dark:bg-ink-900"
     >
-      <Quote class="mx-auto size-8 text-accent-300 dark:text-accent-600" />
+      <Icon name="lucide:quote" class="mx-auto size-8 text-accent-300 dark:text-accent-600" />
       <p class="mt-6 text-lg leading-relaxed text-ink-700 italic dark:text-ink-200">
         "{{ testimonial.quote }}"
       </p>
@@ -20,6 +20,5 @@
 </template>
 
 <script setup lang="ts">
-import { Quote } from 'lucide-vue-next'
 import { testimonials } from '~/data/portfolio'
 </script>

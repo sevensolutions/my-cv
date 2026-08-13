@@ -29,10 +29,7 @@
           class="rounded-2xl border border-ink-100 bg-white p-5 shadow-sm transition-transform hover:-translate-y-1 dark:border-white/10 dark:bg-ink-900"
         >
           <span class="grid size-10 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-            <MapPin v-if="fact.icon === 'map-pin'" class="size-5" />
-            <Flag v-else-if="fact.icon === 'flag'" class="size-5" />
-            <Briefcase v-else-if="fact.icon === 'briefcase'" class="size-5" />
-            <CircleOff v-else-if="fact.icon === 'circle-off'" class="size-5" />
+            <Icon :name="`lucide:${fact.icon}`" class="size-5" />
           </span>
           <p class="mt-3 text-sm text-ink-400">{{ fact.label }}</p>
           <p class="text-base font-semibold text-ink-900 dark:text-white">{{ fact.value }}</p>
@@ -43,6 +40,5 @@
 </template>
 
 <script setup lang="ts">
-import { Briefcase, CircleOff, Flag, MapPin } from 'lucide-vue-next'
 import { facts } from '~/data/portfolio'
 </script>

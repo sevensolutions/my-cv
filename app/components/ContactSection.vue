@@ -22,7 +22,7 @@
             href="mailto:contact@danielpeinhopf.com"
             class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink-900 shadow-lg transition-all hover:-translate-y-0.5 hover:bg-accent-200"
           >
-            <Mail class="size-4" />
+            <Icon name="lucide:mail" class="size-4" />
             contact@danielpeinhopf.com
           </a>
         </div>
@@ -37,10 +37,8 @@
             :aria-label="social.name"
             class="grid size-10 place-items-center rounded-full border border-white/15 text-ink-300 transition-all hover:-translate-y-0.5 hover:border-white/30 hover:text-white"
           >
-            <Github v-if="social.icon === 'github'" class="size-[18px]" />
-            <Instagram v-else-if="social.icon === 'instagram'" class="size-[18px]" />
-            <Facebook v-else-if="social.icon === 'facebook'" class="size-[18px]" />
-            <span v-else-if="social.icon === 'xing'" class="text-[13px] font-bold">X.</span>
+            <Icon v-if="social.icon !== 'xing'" :name="`lucide:${social.icon}`" class="size-[18px]" />
+            <span v-else class="text-[13px] font-bold">X.</span>
           </a>
         </div>
       </div>
@@ -49,6 +47,5 @@
 </template>
 
 <script setup lang="ts">
-import { Facebook, Github, Instagram, Mail } from 'lucide-vue-next'
 import { socials } from '~/data/portfolio'
 </script>

@@ -43,14 +43,14 @@
           </div>
           <div class="flex flex-1 flex-col gap-2 p-5">
             <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-accent-100 px-2.5 py-1 text-xs font-semibold text-accent-700 dark:bg-accent-500/10 dark:text-accent-300">
-              <component :is="categoryIcons[project.category]" class="size-3.5" />
+              <Icon :name="categoryIcons[project.category]" class="size-3.5" />
               {{ categoryLabels[project.category] }}
             </span>
             <h3 class="text-base font-bold text-ink-900 dark:text-white">{{ project.title }}</h3>
             <p class="line-clamp-2 text-sm text-ink-500 dark:text-ink-400">{{ project.description[0] }}</p>
             <span class="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-accent-600 dark:text-accent-400">
               View details
-              <ArrowUpRight class="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <Icon name="lucide:arrow-up-right" class="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
           </div>
         </button>
@@ -62,15 +62,14 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowUpRight, AppWindow, Cpu, Github, Globe, Smartphone } from 'lucide-vue-next'
 import { categoryLabels, projects, type Project, type ProjectCategory } from '~/data/portfolio'
 
-const categoryIcons: Record<ProjectCategory, unknown> = {
-  webApp: AppWindow,
-  mobileApp: Smartphone,
-  website: Globe,
-  electronics: Cpu,
-  openSource: Github,
+const categoryIcons: Record<ProjectCategory, string> = {
+  webApp: 'lucide:app-window',
+  mobileApp: 'lucide:smartphone',
+  website: 'lucide:globe',
+  electronics: 'lucide:cpu',
+  openSource: 'lucide:github',
 }
 
 const filters: { label: string; value: ProjectCategory | 'all' }[] = [

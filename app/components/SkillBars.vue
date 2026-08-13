@@ -2,9 +2,7 @@
   <div class="rounded-3xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8 dark:border-white/10 dark:bg-ink-900">
     <div class="mb-6 flex items-center gap-3">
       <span class="grid size-11 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-        <Code v-if="icon === 'code'" class="size-5" />
-        <Globe v-else-if="icon === 'globe'" class="size-5" />
-        <Layers v-else class="size-5" />
+        <Icon :name="`lucide:${icon}`" class="size-5" />
       </span>
       <h3 class="text-lg font-bold text-ink-900 dark:text-white">{{ title }}</h3>
     </div>
@@ -27,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import { Code, Globe, Layers } from 'lucide-vue-next'
-
 const props = defineProps<{
   title: string
   icon: 'code' | 'globe' | 'layers'

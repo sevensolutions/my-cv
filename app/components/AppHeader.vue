@@ -23,8 +23,8 @@
           class="grid size-10 place-items-center rounded-full text-ink-500 transition-colors hover:bg-ink-100 hover:text-ink-800 dark:text-ink-300 dark:hover:bg-white/10 dark:hover:text-white"
           @click="toggle"
         >
-          <Sun v-if="isDark" class="size-5" />
-          <Moon v-else class="size-5" />
+          <Icon v-if="isDark" name="lucide:sun" class="size-5" />
+          <Icon v-else name="lucide:moon" class="size-5" />
         </button>
 
         <a
@@ -40,8 +40,8 @@
           class="grid size-10 place-items-center rounded-full text-ink-500 transition-colors hover:bg-ink-100 hover:text-ink-800 md:hidden dark:text-ink-300 dark:hover:bg-white/10 dark:hover:text-white"
           @click="mobileOpen = !mobileOpen"
         >
-          <X v-if="mobileOpen" class="size-5" />
-          <Menu v-else class="size-5" />
+          <Icon v-if="mobileOpen" name="lucide:x" class="size-5" />
+          <Icon v-else name="lucide:menu" class="size-5" />
         </button>
       </div>
     </nav>
@@ -73,8 +73,6 @@
 </template>
 
 <script setup lang="ts">
-import { Menu, Moon, Sun, X } from 'lucide-vue-next'
-
 const links = [
   { href: '#about', label: 'About' },
   { href: '#resume', label: 'Resume' },

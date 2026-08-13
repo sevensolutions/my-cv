@@ -2,8 +2,8 @@
   <div class="rounded-3xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8 dark:border-white/10 dark:bg-ink-900">
     <div class="mb-8 flex items-center gap-3">
       <span class="grid size-11 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-        <Briefcase v-if="icon === 'briefcase'" class="size-5" />
-        <GraduationCap v-else class="size-5" />
+        <Icon v-if="icon === 'briefcase'" name="lucide:briefcase" class="size-5" />
+        <Icon v-else name="lucide:graduation-cap" class="size-5" />
       </span>
       <h3 class="text-xl font-bold text-ink-900 dark:text-white">{{ title }}</h3>
     </div>
@@ -25,7 +25,7 @@
           class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
         >
           {{ item.link.label }}
-          <ExternalLink class="size-3.5" />
+          <Icon name="lucide:external-link" class="size-3.5" />
         </a>
       </li>
     </ol>
@@ -33,7 +33,6 @@
 </template>
 
 <script setup lang="ts">
-import { Briefcase, ExternalLink, GraduationCap } from 'lucide-vue-next'
 import type { ExperienceItem } from '~/data/portfolio'
 
 defineProps<{

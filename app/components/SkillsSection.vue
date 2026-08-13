@@ -10,7 +10,7 @@
       <div class="rounded-3xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8 dark:border-white/10 dark:bg-ink-900">
         <div class="mb-6 flex items-center gap-3">
           <span class="grid size-11 place-items-center rounded-xl bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-            <BookOpen class="size-5" />
+            <Icon name="lucide:book-open" class="size-5" />
           </span>
           <h3 class="text-lg font-bold text-ink-900 dark:text-white">Knowledge</h3>
         </div>
@@ -29,6 +29,5 @@
 </template>
 
 <script setup lang="ts">
-import { BookOpen } from 'lucide-vue-next'
 import { codingSkills, frameworkSkills, knowledge, languageSkills } from '~/data/portfolio'
 </script>

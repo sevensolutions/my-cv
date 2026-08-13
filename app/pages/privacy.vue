@@ -3,7 +3,7 @@
     <AppHeader />
     <main class="mx-auto max-w-3xl px-6 pt-32 pb-24">
       <NuxtLink to="/" class="inline-flex items-center gap-2 text-sm font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400">
-        <ArrowLeft class="size-4" />
+        <Icon name="lucide:arrow-left" class="size-4" />
         Back home
       </NuxtLink>
 
@@ -129,7 +129,5 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowLeft } from 'lucide-vue-next'
-
 useHead({ title: 'Privacy — Daniel Peinhopf' })
 </script>

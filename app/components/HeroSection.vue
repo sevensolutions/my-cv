@@ -34,7 +34,7 @@
             class="inline-flex items-center gap-2 rounded-full bg-ink-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-ink-900/10 transition-all hover:-translate-y-0.5 hover:bg-accent-600 dark:bg-white dark:text-ink-900 dark:hover:bg-accent-400"
           >
             View my work
-            <ArrowRight class="size-4" />
+            <Icon name="lucide:arrow-right" class="size-4" />
           </a>
           <a
             href="#contact"
@@ -60,7 +60,7 @@
         </div>
         <div class="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-4 py-3 shadow-xl dark:border-white/10 dark:bg-ink-900">
           <span class="grid size-9 place-items-center rounded-full bg-accent-100 text-accent-600 dark:bg-accent-500/10 dark:text-accent-300">
-            <Code class="size-4" />
+            <Icon name="lucide:code" class="size-4" />
           </span>
           <div class="leading-tight">
             <p class="text-sm font-semibold text-ink-900 dark:text-white">C# / .NET</p>
@@ -73,7 +73,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRight, Code } from 'lucide-vue-next'
 import { roles } from '~/data/portfolio'
 
 const { text } = useTypewriter(roles)
