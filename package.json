@@ -1,25 +1,25 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "my-cv2",
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "pages:dev": "wrangler pages dev --compatibility-date=2024-01-29 --proxy 3000 -- npm run dev",
+    "pages:dev": "wrangler pages dev --compatibility-date=2024-01-29 --proxy 3000 -- bun run dev",
     "pages:deploy": "npm run build && wrangler pages deploy ./dist"
   },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240129.0",
-    "nuxt": "^3.10.0",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5",
-    "wrangler": "^3.26.0"
-  },
   "dependencies": {
-    "nuxt-swiper": "^1.2.2",
-    "timers": "^0.1.1"
+    "@tailwindcss/vite": "^4.3.3",
+    "lucide-vue-next": "^1.0.0",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.122.0"
   }
 }

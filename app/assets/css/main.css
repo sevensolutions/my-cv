@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Soft, muted accent palette (sky blue base) */
+  --color-accent-50: #f0f9ff;
+  --color-accent-100: #e0f2fe;
+  --color-accent-200: #bae6fd;
+  --color-accent-300: #85d4fa;
+  --color-accent-400: #4fbdf0;
+  --color-accent-500: #2ea5db;
+  --color-accent-600: #1c86ba;
+  --color-accent-700: #1b6b95;
+  --color-accent-800: #1c577a;
+  --color-accent-900: #1a4966;
+
+  /* Soft peach/rose secondary accent */
+  --color-warm-100: #fdf0ea;
+  --color-warm-200: #fbdfd2;
+  --color-warm-300: #f6c4ae;
+  --color-warm-400: #efa284;
+  --color-warm-500: #e3805f;
+
+  /* Neutral warm paper background */
+  --color-paper-50: #faf9f7;
+  --color-paper-100: #f4f2ee;
+  --color-paper-200: #e9e6df;
+
+  --color-ink-50: #f7f7f8;
+  --color-ink-100: #eceded;
+  --color-ink-200: #d8d9dd;
+  --color-ink-300: #b6b8c0;
+  --color-ink-400: #8b8d98;
+  --color-ink-500: #6b6d78;
+  --color-ink-600: #52545e;
+  --color-ink-700: #3d3f47;
+  --color-ink-800: #26272c;
+  --color-ink-900: #18191c;
+  --color-ink-950: #101114;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-paper-50);
+  color: var(--color-ink-800);
+}
+
+.dark body {
+  background-color: var(--color-ink-950);
+  color: var(--color-ink-100);
+}
+
+::selection {
+  background-color: var(--color-accent-200);
+  color: var(--color-ink-900);
+}
+
+.dark ::selection {
+  background-color: var(--color-accent-700);
+  color: white;
+}
+
+/* Legal page typography (imprint / privacy) */
+.legal h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-ink-900);
+}
+.legal h2 {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-ink-500);
+}
+.legal h3 {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-ink-900);
+}
+.legal p {
+  margin-top: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-ink-600);
+}
+.legal ul {
+  margin-top: 0.85rem;
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: var(--color-ink-600);
+}
+.legal li {
+  margin-top: 0.35rem;
+  line-height: 1.7;
+}
+.legal a {
+  color: var(--color-accent-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dark .legal h1,
+.dark .legal h3 {
+  color: white;
+}
+.dark .legal h2,
+.dark .legal p,
+.dark .legal ul {
+  color: var(--color-ink-400);
+}
