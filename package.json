@@ -11,6 +11,7 @@
     "pages:deploy": "bun run build && wrangler pages deploy ./dist"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.3.0",
     "@iconify-json/lucide": "^1.2.123",
     "@nuxt/icon": "^2.5.0",
     "@nuxtjs/color-mode": "^4.0.1",
