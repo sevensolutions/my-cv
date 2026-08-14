@@ -6,10 +6,10 @@ image: /images/blog/nomad-iis-website-1.21.0.png
 tags: [open-source, nomad, iis]
 ---
 
-![Banner](/images/blog/nomad-iis-website-1.21.0.png)
+[![Banner](/images/blog/nomad-iis-website-1.21.0.png)](https://nomad-iis.sevensolutions.cc)
 <br />
 
-I just tagged [v1.21.0](https://github.com/sevensolutions/nomad-iis/releases/tag/v1.21.0) of [Nomad IIS](https://github.com/sevensolutions/nomad-iis), and I'm calling it the first stable release.
+I just tagged [v1.21.0](https://github.com/sevensolutions/nomad-iis/releases/tag/v1.21.0) of [Nomad IIS](https://nomad-iis.sevensolutions.cc), and I'm calling it the first stable release.
 
 Nomad IIS is a task driver plugin for HashiCorp Nomad that lets you run workloads directly on Microsoft IIS. If you're stuck running .NET Framework apps, or anything else that only really wants to live inside IIS, but still want it managed by Nomad like the rest of your fleet, that's the gap this fills.
 

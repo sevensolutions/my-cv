@@ -8,7 +8,7 @@
       </NuxtLink>
 
       <h1 class="mt-8 text-3xl font-bold tracking-tight text-ink-900 dark:text-white">Blog</h1>
-      <p class="mt-2 text-ink-500 dark:text-ink-400">Notes on web apps, DevOps tooling and open source.</p>
+      <p class="mt-2 text-ink-500 dark:text-ink-400">My own personal blog.</p>
 
       <ul v-if="posts?.length" class="mt-10 divide-y divide-ink-100 dark:divide-white/5">
         <li v-for="post in posts" :key="post.path">
@@ -25,6 +25,9 @@
                 {{ post.title }}
               </h2>
               <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">{{ post.description }}</p>
+              <div v-if="post.tags?.length" class="mt-2 flex flex-wrap gap-1.5">
+                <Badge v-for="tag in post.tags" :key="tag">{{ tag }}</Badge>
+              </div>
             </div>
           </NuxtLink>
         </li>

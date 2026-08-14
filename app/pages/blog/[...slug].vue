@@ -11,6 +11,10 @@
         <p class="mt-8 text-xs font-medium tracking-wide text-ink-400 uppercase">{{ formatDate(post.date) }}</p>
         <h1 class="mt-1 text-3xl font-bold tracking-tight text-ink-900 dark:text-white">{{ post.title }}</h1>
 
+        <div v-if="post.tags?.length" class="mt-4 flex flex-wrap gap-2">
+          <Badge v-for="tag in post.tags" :key="tag">{{ tag }}</Badge>
+        </div>
+
         <div class="legal mt-8">
           <ContentRenderer :value="post" />
         </div>
