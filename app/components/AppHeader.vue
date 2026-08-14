@@ -6,13 +6,13 @@
       : 'border-b border-transparent bg-transparent'"
   >
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="#home" class="text-lg font-bold tracking-tight text-ink-900 dark:text-white">
+      <NuxtLink to="/" class="text-lg font-bold tracking-tight text-ink-900 dark:text-white">
         Daniel<span class="text-accent-500">.</span>
-      </a>
+      </NuxtLink>
 
       <ul class="hidden items-center gap-8 text-sm font-medium text-ink-600 md:flex dark:text-ink-300">
         <li v-for="link in links" :key="link.href">
-          <a :href="link.href" class="transition-colors hover:text-accent-600 dark:hover:text-accent-400">{{ link.label }}</a>
+          <NuxtLink :to="link.href" class="transition-colors hover:text-accent-600 dark:hover:text-accent-400">{{ link.label }}</NuxtLink>
         </li>
       </ul>
 
@@ -27,12 +27,12 @@
           <Icon v-else name="lucide:moon" size="1.2em" />
         </button>
 
-        <a
-          href="#contact"
+        <NuxtLink
+          to="/#contact"
           class="hidden rounded-full bg-ink-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-600 sm:inline-flex dark:bg-white dark:text-ink-900 dark:hover:bg-accent-400"
         >
           Get in touch
-        </a>
+        </NuxtLink>
 
         <button
           type="button"
@@ -59,13 +59,13 @@
         class="flex flex-col gap-1 border-t border-ink-100 bg-paper-50 px-6 py-4 text-sm font-medium text-ink-600 md:hidden dark:border-white/5 dark:bg-ink-950 dark:text-ink-300"
       >
         <li v-for="link in links" :key="link.href">
-          <a
-            :href="link.href"
+          <NuxtLink
+            :to="link.href"
             class="block rounded-lg px-3 py-2.5 transition-colors hover:bg-ink-100 hover:text-ink-900 dark:hover:bg-white/10 dark:hover:text-white"
             @click="mobileOpen = false"
           >
             {{ link.label }}
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </Transition>
@@ -74,11 +74,12 @@
 
 <script setup lang="ts">
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#resume', label: 'Resume' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#about', label: 'About' },
+  { href: '/#resume', label: 'Resume' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contact', label: 'Contact' },
 ]
 
 const colorMode = useColorMode()

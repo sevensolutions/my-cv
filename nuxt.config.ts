@@ -4,11 +4,42 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  ssr: false,
+  ssr: true,
 
-  modules: ['@nuxt/icon', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode', '@nuxt/content'],
 
   css: ['~/assets/css/main.css'],
+
+  icon: {
+    // Bundle used icons at build time instead of fetching them at runtime.
+    // With `ssr: true`, the default `server` provider tries to resolve icons
+    // via an internal API call during SSR/prerender, which fails in this
+    // setup (logged as "[Icon] failed to load icon ..."). Icons still end up
+    // rendering fine client-side, but bundling avoids the failed lookups and
+    // any network dependency entirely.
+    provider: 'none',
+    clientBundle: {
+      // Static scanning only catches literal `name="lucide:..."` usages. A
+      // few icon names are built dynamically from data (`app/data/portfolio.ts`,
+      // SocialLinks, SkillBars, ...), so they need to be listed explicitly.
+      scan: true,
+      icons: [
+        'lucide:app-window',
+        'lucide:smartphone',
+        'lucide:globe',
+        'lucide:cpu',
+        'lucide:github',
+        'lucide:instagram',
+        'lucide:facebook',
+        'lucide:map-pin',
+        'lucide:flag',
+        'lucide:briefcase',
+        'lucide:circle-off',
+        'lucide:code',
+        'lucide:layers',
+      ],
+    },
+  },
 
   colorMode: {
     preference: 'dark',
